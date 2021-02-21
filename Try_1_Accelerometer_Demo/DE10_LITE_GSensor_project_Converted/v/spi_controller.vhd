@@ -19,7 +19,7 @@
 --
 library ieee;
 use ieee.std_logic_1164.all;
-package vl2vh_common_pack is 
+package vl2vh_common_pack_spi_controller is 
     type vl2vh_memory_type is      array  ( natural range <> , natural range <>  )  of std_logic ;
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic; 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic_vector;  constant falseval : std_logic_vector)  return std_logic_vector; 
@@ -28,7 +28,7 @@ end package;
 
 
 
-package body vl2vh_common_pack is 
+package body vl2vh_common_pack_spi_controller is 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic is 
     begin
         if ( cond ) then 
@@ -53,8 +53,8 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
-entity spi_controller is 
+use work.vl2vh_common_pack_spi_controller.all;
+entity spi_controller_spi_controller is 
      port (
         iRSTN :  in std_logic;
         iSPI_CLK :  in std_logic;
@@ -70,7 +70,7 @@ entity spi_controller is
 end entity; 
 
 
-architecture rtl of spi_controller is 
+architecture rtl of spi_controller_spi_controller is 
     signal SI_DataL : std_logic;
     signal SO_DataL : std_logic;
     signal read_mode : std_logic;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Fri Feb 19 22:56:21 2021
+Sun Feb 21 21:00:02 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Feb 19 22:56:21 2021           ;
+; Analysis & Synthesis Status        ; Failed - Sun Feb 21 21:00:02 2021           ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; DE10_LITE_GSensor                           ;
@@ -164,51 +164,63 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 19 22:56:07 2021
+    Info: Processing started: Sun Feb 21 20:59:53 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12090): Entity "altpll" obtained from "v/spi_pll.vhd" instead of from Quartus Prime megafunction library File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 57
 Info (12021): Found 6 design units, including 2 entities, in source file v/spi_pll.vhd
-    Info (12022): Found design unit 1: vl2vh_common_pack File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-    Info (12022): Found design unit 2: vl2vh_common_pack-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 31
+    Info (12022): Found design unit 1: vl2vh_common_pack_spi_pll File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack_spi_pll-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 31
     Info (12022): Found design unit 3: altpll-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 100
-    Info (12022): Found design unit 4: spi_pll-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 121
+    Info (12022): Found design unit 4: spi_pll_spi_pll-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 121
     Info (12023): Found entity 1: altpll File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 57
-    Info (12023): Found entity 2: spi_pll File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 111
-Error (10430): VHDL Primary Unit Declaration error at DE10_LITE_GSensor.vhd(22): primary unit "vl2vh_common_pack" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 22
-Error (10784): HDL error at spi_pll.vhd(22): see declaration for object "vl2vh_common_pack" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-Error (10523): Ignored construct reset_delay at DE10_LITE_GSensor.vhd(57) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 57
-Error (10523): Ignored construct spi_pll at DE10_LITE_GSensor.vhd(77) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 77
-Error (10523): Ignored construct spi_ee_config at DE10_LITE_GSensor.vhd(98) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 98
-Error (10523): Ignored construct led_driver at DE10_LITE_GSensor.vhd(124) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 124
-Error (10523): Ignored construct DE10_LITE_GSensor at DE10_LITE_GSensor.vhd(146) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 146
-Info (12021): Found 0 design units, including 0 entities, in source file de10_lite_gsensor.vhd
-Error (10430): VHDL Primary Unit Declaration error at spi_pll_bb.vhd(22): primary unit "vl2vh_common_pack" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll_bb.vhd Line: 22
-Error (10784): HDL error at spi_pll.vhd(22): see declaration for object "vl2vh_common_pack" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-Error (10523): Ignored construct spi_pll at spi_pll_bb.vhd(57) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll_bb.vhd Line: 57
-Info (12021): Found 0 design units, including 0 entities, in source file v/spi_pll_bb.vhd
-Error (10430): VHDL Primary Unit Declaration error at spi_ee_config.vhd(22): primary unit "vl2vh_common_pack" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 22
-Error (10784): HDL error at spi_pll.vhd(22): see declaration for object "vl2vh_common_pack" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-Error (10523): Ignored construct spi_controller at spi_ee_config.vhd(57) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 57
-Error (10523): Ignored construct spi_ee_config at spi_ee_config.vhd(84) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 84
-Info (12021): Found 0 design units, including 0 entities, in source file v/spi_ee_config.vhd
-Error (10430): VHDL Primary Unit Declaration error at spi_controller.vhd(22): primary unit "vl2vh_common_pack" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 22
-Error (10784): HDL error at spi_pll.vhd(22): see declaration for object "vl2vh_common_pack" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-Error (10523): Ignored construct spi_controller at spi_controller.vhd(57) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 57
-Info (12021): Found 0 design units, including 0 entities, in source file v/spi_controller.vhd
-Error (10430): VHDL Primary Unit Declaration error at reset_delay.vhd(22): primary unit "vl2vh_common_pack" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 22
-Error (10784): HDL error at spi_pll.vhd(22): see declaration for object "vl2vh_common_pack" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-Error (10523): Ignored construct reset_delay at reset_delay.vhd(57) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 57
-Info (12021): Found 0 design units, including 0 entities, in source file v/reset_delay.vhd
-Error (10430): VHDL Primary Unit Declaration error at led_driver.vhd(22): primary unit "vl2vh_common_pack" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 22
-Error (10784): HDL error at spi_pll.vhd(22): see declaration for object "vl2vh_common_pack" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 22
-Error (10523): Ignored construct led_driver at led_driver.vhd(57) due to previous errors File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 57
-Info (12021): Found 0 design units, including 0 entities, in source file v/led_driver.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 23 errors, 2 warnings
+    Info (12023): Found entity 2: spi_pll_spi_pll File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll.vhd Line: 111
+Info (12021): Found 12 design units, including 5 entities, in source file de10_lite_gsensor.vhd
+    Info (12022): Found design unit 1: vl2vh_common_pack File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 31
+    Info (12022): Found design unit 3: reset_delay-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 66
+    Info (12022): Found design unit 4: spi_pll-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 87
+    Info (12022): Found design unit 5: spi_ee_config-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 113
+    Info (12022): Found design unit 6: led_driver-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 135
+    Info (12022): Found design unit 7: DE10_LITE_GSensor-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 181
+    Info (12023): Found entity 1: reset_delay File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 57
+    Info (12023): Found entity 2: spi_pll File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 77
+    Info (12023): Found entity 3: spi_ee_config File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 98
+    Info (12023): Found entity 4: led_driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 124
+    Info (12023): Found entity 5: DE10_LITE_GSensor File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 146
+Info (12021): Found 4 design units, including 1 entities, in source file v/spi_pll_bb.vhd
+    Info (12022): Found design unit 1: vl2vh_common_pack_spi_pll_bb File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll_bb.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack_spi_pll_bb-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll_bb.vhd Line: 31
+    Info (12022): Found design unit 3: spi_pll_spi_pll_bb-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll_bb.vhd Line: 67
+    Info (12023): Found entity 1: spi_pll_spi_pll_bb File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_pll_bb.vhd Line: 57
+Info (12021): Found 6 design units, including 2 entities, in source file v/spi_ee_config.vhd
+    Info (12022): Found design unit 1: vl2vh_common_pack_spi_ee_config File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack_spi_ee_config-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 31
+    Info (12022): Found design unit 3: spi_controller-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 73
+    Info (12022): Found design unit 4: spi_ee_config_spi_ee_config-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 100
+    Info (12023): Found entity 1: spi_controller File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 57
+    Info (12023): Found entity 2: spi_ee_config_spi_ee_config File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 85
+Info (12021): Found 4 design units, including 1 entities, in source file v/spi_controller.vhd
+    Info (12022): Found design unit 1: vl2vh_common_pack_spi_controller File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack_spi_controller-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 31
+    Info (12022): Found design unit 3: spi_controller_spi_controller-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 73
+    Info (12023): Found entity 1: spi_controller_spi_controller File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 57
+Info (12021): Found 4 design units, including 1 entities, in source file v/reset_delay.vhd
+    Info (12022): Found design unit 1: vl2vh_common_pack_reset_delay File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack_reset_delay-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 31
+    Info (12022): Found design unit 3: reset_delay_reset_delay-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 66
+    Info (12023): Found entity 1: reset_delay_reset_delay File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 57
+Info (12021): Found 4 design units, including 1 entities, in source file v/led_driver.vhd
+    Info (12022): Found design unit 1: vl2vh_common_pack_led_driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 22
+    Info (12022): Found design unit 2: vl2vh_common_pack_led_driver-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 31
+    Info (12022): Found design unit 3: led_driver_led_driver-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 68
+    Info (12023): Found entity 1: led_driver_led_driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 57
+Error (10327): VHDL error at spi_ee_config.vhd(104): can't determine definition of operator ""-"" -- found 0 possible definitions File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 104
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
     Error: Peak virtual memory: 4777 megabytes
-    Error: Processing ended: Fri Feb 19 22:56:21 2021
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:26
+    Error: Processing ended: Sun Feb 21 21:00:02 2021
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:20
 
 

@@ -19,7 +19,7 @@
 --
 library ieee;
 use ieee.std_logic_1164.all;
-package vl2vh_common_pack is 
+package vl2vh_common_pack_spi_ee_config is 
     type vl2vh_memory_type is      array  ( natural range <> , natural range <>  )  of std_logic ;
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic; 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic_vector;  constant falseval : std_logic_vector)  return std_logic_vector; 
@@ -28,7 +28,7 @@ end package;
 
 
 
-package body vl2vh_common_pack is 
+package body vl2vh_common_pack_spi_ee_config is 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic is 
     begin
         if ( cond ) then 
@@ -53,7 +53,7 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
+use work.vl2vh_common_pack_spi_ee_config.all;
 entity spi_controller is 
      port (
         iRSTN :  in std_logic;
@@ -80,15 +80,16 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
-entity spi_ee_config is 
+use ieee.std_logic_arith.all;
+use work.vl2vh_common_pack_spi_ee_config.all;
+entity spi_ee_config_spi_ee_config is 
      port (
         iRSTN :  in std_logic;
         iSPI_CLK :  in std_logic;
         iSPI_CLK_OUT :  in std_logic;
         iG_INT2 :  in std_logic;
-        oDATA_L :  out std_logic_vector( SO_DataL downto 0  );
-        oDATA_H :  out std_logic_vector( SO_DataL downto 0  );
+        oDATA_L :  out std_logic_vector( 1 downto 0  );
+        oDATA_H :  out std_logic_vector( 1 downto 0  );
         SPI_SDIO :  inout std_logic;
         oSPI_CSN :  out std_logic;
         oSPI_CLK :  out std_logic
@@ -96,7 +97,7 @@ entity spi_ee_config is
 end entity; 
 
 
-architecture rtl of spi_ee_config is 
+architecture rtl of spi_ee_config_spi_ee_config is 
     signal SO_DataL : std_logic;
     signal ini_index : std_logic_vector( 3  downto 0  );
     signal SI_DataL : std_logic;

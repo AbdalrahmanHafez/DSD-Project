@@ -19,7 +19,7 @@
 --
 library ieee;
 use ieee.std_logic_1164.all;
-package vl2vh_common_pack is 
+package vl2vh_common_pack_spi_pll_bb is 
     type vl2vh_memory_type is      array  ( natural range <> , natural range <>  )  of std_logic ;
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic; 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic_vector;  constant falseval : std_logic_vector)  return std_logic_vector; 
@@ -28,7 +28,7 @@ end package;
 
 
 
-package body vl2vh_common_pack is 
+package body vl2vh_common_pack_spi_pll_bb is 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic is 
     begin
         if ( cond ) then 
@@ -53,8 +53,8 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
-entity spi_pll is 
+use work.vl2vh_common_pack_spi_pll_bb.all;
+entity spi_pll_spi_pll_bb is 
      port (
         areset :  in std_logic;
         inclk0 :  in std_logic;
@@ -64,7 +64,7 @@ entity spi_pll is
 end entity; 
 
 
-architecture rtl of spi_pll is 
+architecture rtl of spi_pll_spi_pll_bb is 
     begin 
     end; 
 

@@ -19,7 +19,7 @@
 --
 library ieee;
 use ieee.std_logic_1164.all;
-package vl2vh_common_pack is 
+package vl2vh_common_pack_spi_pll is 
     type vl2vh_memory_type is      array  ( natural range <> , natural range <>  )  of std_logic ;
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic; 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic_vector;  constant falseval : std_logic_vector)  return std_logic_vector; 
@@ -28,7 +28,7 @@ end package;
 
 
 
-package body vl2vh_common_pack is 
+package body vl2vh_common_pack_spi_pll is 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic is 
     begin
         if ( cond ) then 
@@ -53,7 +53,7 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
+use work.vl2vh_common_pack_spi_pll.all;
 entity altpll is 
      port (
         areset :  in std_logic;
@@ -107,18 +107,18 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
-entity spi_pll is 
+use work.vl2vh_common_pack_spi_pll.all;
+entity spi_pll_spi_pll is 
      port (
         areset :  in std_logic;
         inclk0 :  in std_logic;
-        c0 :  out std_logic := sub_wire4;
-        c1 :  out std_logic := sub_wire5
+        c0 :  out std_logic;
+        c1 :  out std_logic
     );
 end entity; 
 
 
-architecture rtl of spi_pll is 
+architecture rtl of spi_pll_spi_pll is 
     signal sub_wire2 : std_logic_vector( 0  downto 0  ) := X"0" ;
     signal sub_wire3 : std_logic_vector( 4  downto 0  );
     signal sub_wire0 : std_logic := inclk0;
@@ -173,14 +173,14 @@ architecture rtl of spi_pll is
                 areset => areset,
                 clk => sub_wire3,
                 clkbad =>  open ,
-                clkena => ( '1' & '1' & '1' & '1' & '1' & '1' ),
+                clkena => ( '1' ),
                 clkloss =>  open ,
                 clkswitch => '0',
                 configupdate => '0',
                 enable0 =>  open ,
                 enable1 =>  open ,
                 extclk =>  open ,
-                extclkena => ( '1' & '1' & '1' & '1' ),
+                extclkena => ( '1' ),
                 fbin => '1',
                 fbmimicbidir =>  open ,
                 fbout =>  open ,
@@ -189,7 +189,7 @@ architecture rtl of spi_pll is
                 inclk => sub_wire1,
                 locked =>  open ,
                 pfdena => '1',
-                phasecounterselect => ( '1' & '1' & '1' & '1' ),
+                phasecounterselect => ( '1' ),
                 phasedone =>  open ,
                 phasestep => '1',
                 phaseupdown => '1',

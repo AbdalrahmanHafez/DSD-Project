@@ -19,7 +19,7 @@
 --
 library ieee;
 use ieee.std_logic_1164.all;
-package vl2vh_common_pack is 
+package vl2vh_common_pack_led_driver is 
     type vl2vh_memory_type is      array  ( natural range <> , natural range <>  )  of std_logic ;
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic; 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic_vector;  constant falseval : std_logic_vector)  return std_logic_vector; 
@@ -28,7 +28,7 @@ end package;
 
 
 
-package body vl2vh_common_pack is 
+package body vl2vh_common_pack_led_driver is 
     function vl2vh_ternary_func(  constant cond : Boolean;  constant trueval : std_logic;  constant falseval : std_logic)  return std_logic is 
     begin
         if ( cond ) then 
@@ -53,8 +53,8 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use work.vl2vh_common_pack.all;
-entity led_driver is 
+use work.vl2vh_common_pack_led_driver.all;
+entity led_driver_led_driver is 
      port (
         iRSTN :  in std_logic;
         iCLK :  in std_logic;
@@ -65,7 +65,7 @@ entity led_driver is
 end entity; 
 
 
-architecture rtl of led_driver is 
+architecture rtl of led_driver_led_driver is 
     signal select_data : std_logic_vector( 4  downto 0  );
     signal signed_bit : std_logic;
     signal abs_select_high : std_logic_vector( 3  downto 0  );

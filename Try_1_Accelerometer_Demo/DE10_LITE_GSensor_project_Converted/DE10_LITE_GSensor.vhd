@@ -183,6 +183,7 @@ architecture rtl of DE10_LITE_GSensor is
     signal spi_clk : std_logic;
     signal spi_clk_out : std_logic;
     signal data_x : std_logic_vector( 15  downto 0  );
+    signal not_dly_rst : std_logic;
     component reset_delay is 
          port (
             iRSTN :  in std_logic;
@@ -238,7 +239,7 @@ architecture rtl of DE10_LITE_GSensor is
             port map (
                 SPI_SDIO => GSENSOR_SDI,
                 iG_INT2 => GSENSOR_INT(1 ),
-                iRSTN => (  not dly_rst ) ,
+                iRSTN => (  not_dly_rst ) ,
                 iSPI_CLK => spi_clk,
                 iSPI_CLK_OUT => spi_clk_out,
                 oDATA_H => data_x(15  downto 8 ),
@@ -251,9 +252,10 @@ architecture rtl of DE10_LITE_GSensor is
                 iCLK => MAX10_CLK1_50,
                 iDIG => data_x(9  downto 0 ),
                 iG_INT2 => GSENSOR_INT(1 ),
-                iRSTN => (  not dly_rst ) ,
+                iRSTN => (  not_dly_rst ) ,
                 oLED => LEDR
                 );
+        not_dly_rst <= not dly_rst;
     end; 
 
 
