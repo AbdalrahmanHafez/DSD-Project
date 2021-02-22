@@ -1,0 +1,269 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "mosi",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "cs",
+					"strict" : false
+				},
+				{
+					"name" : "mosi_test",
+					"strict" : false
+				},
+				{
+					"name" : "sclk_test",
+					"strict" : false
+				},
+				{
+					"name" : "cs_test",
+					"strict" : false
+				},
+				{
+					"name" : "miso_test",
+					"strict" : false
+				},
+				{
+					"name" : "int1_test",
+					"strict" : false
+				},
+				{
+					"name" : "s1_test",
+					"strict" : false
+				},
+				{
+					"name" : "s2_test",
+					"strict" : false
+				},
+				{
+					"name" : "s3_test",
+					"strict" : false
+				},
+				{
+					"name" : "mode_test",
+					"strict" : false
+				},
+				{
+					"name" : "led0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led0_dp",
+					"strict" : false
+				},
+				{
+					"name" : "led1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led1_dp",
+					"strict" : false
+				},
+				{
+					"name" : "led2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led2_dp",
+					"strict" : false
+				},
+				{
+					"name" : "led3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led4_dp",
+					"strict" : false
+				},
+				{
+					"name" : "led5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led5_dp",
+					"strict" : false
+				},
+				{
+					"name" : "rst_led",
+					"strict" : false
+				},
+				{
+					"name" : "miso",
+					"strict" : false
+				},
+				{
+					"name" : "int1",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk50MHz",
+					"strict" : false
+				},
+				{
+					"name" : "intBypass",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

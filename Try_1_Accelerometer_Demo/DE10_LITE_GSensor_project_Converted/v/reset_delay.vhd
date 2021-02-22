@@ -69,12 +69,13 @@ architecture rtl of reset_delay_reset_delay is
         process 
         begin
             wait until ( ( iRSTN'EVENT and ( iRSTN = '0' )  )  or ( iCLK'EVENT and ( iCLK = '1' )  )  ) ;
-            if ( (  not iRSTN )  ) then 
-                cont <= '0';
+            if ( (  not iRSTN='1' )  ) then 
+                cont <= "0";
                 oRST <= '1';
             else 
-                if ( (  not cont(20 ) )  ) then 
-                    cont <= ( cont + '1' ) ;
+                if ( (  not cont(20)='1' )  ) then 
+--                    cont <= ( cont + '1' ) ;
+						  cont <= std_logic_vector( unsigned(cont) + 1 );
                     oRST <= '1';
                 else 
                     oRST <= '0';

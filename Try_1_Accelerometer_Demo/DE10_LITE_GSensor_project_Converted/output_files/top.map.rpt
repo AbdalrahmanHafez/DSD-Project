@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Feb 21 21:00:02 2021
+Mon Feb 22 14:35:08 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "spi_ee_config:u_spi_ee_config"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +44,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Feb 21 21:00:02 2021           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 22 14:35:08 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; DE10_LITE_GSensor                           ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 101                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -158,13 +165,112 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; DE10_LITE_GSensor.vhd            ; yes             ; User VHDL File  ; C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+;                                             ;                   ;
+; Total combinational functions               ; 0                 ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 0                 ;
+;     -- 3 input functions                    ; 0                 ;
+;     -- <=2 input functions                  ; 0                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 0                 ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 0                 ;
+;     -- Dedicated logic registers            ; 0                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 101               ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; DRAM_DQ[0]~output ;
+; Maximum fan-out                             ; 1                 ;
+; Total fan-out                               ; 136               ;
+; Average fan-out                             ; 0.57              ;
++---------------------------------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------------+--------------+
+; |DE10_LITE_GSensor         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 101  ; 0            ; 0          ; |DE10_LITE_GSensor  ; DE10_LITE_GSensor ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "spi_ee_config:u_spi_ee_config"                                                              ;
++---------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                             ;
++---------------+-------+----------+-------------------------------------------------------------------------------------+
+; odata_h[7..2] ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 101                         ;
+; cycloneiii_io_obuf    ; 35                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Feb 21 20:59:53 2021
+    Info: Processing started: Mon Feb 22 14:34:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -204,7 +310,7 @@ Info (12021): Found 6 design units, including 2 entities, in source file v/spi_e
 Info (12021): Found 4 design units, including 1 entities, in source file v/spi_controller.vhd
     Info (12022): Found design unit 1: vl2vh_common_pack_spi_controller File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 22
     Info (12022): Found design unit 2: vl2vh_common_pack_spi_controller-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 31
-    Info (12022): Found design unit 3: spi_controller_spi_controller-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 73
+    Info (12022): Found design unit 3: spi_controller_spi_controller-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 75
     Info (12023): Found entity 1: spi_controller_spi_controller File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_controller.vhd Line: 57
 Info (12021): Found 4 design units, including 1 entities, in source file v/reset_delay.vhd
     Info (12022): Found design unit 1: vl2vh_common_pack_reset_delay File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/reset_delay.vhd Line: 22
@@ -216,11 +322,150 @@ Info (12021): Found 4 design units, including 1 entities, in source file v/led_d
     Info (12022): Found design unit 2: vl2vh_common_pack_led_driver-body File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 31
     Info (12022): Found design unit 3: led_driver_led_driver-rtl File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 68
     Info (12023): Found entity 1: led_driver_led_driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/led_driver.vhd Line: 57
-Error (10327): VHDL error at spi_ee_config.vhd(104): can't determine definition of operator ""-"" -- found 0 possible definitions File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/v/spi_ee_config.vhd Line: 104
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4777 megabytes
-    Error: Processing ended: Sun Feb 21 21:00:02 2021
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:20
+Info (12127): Elaborating entity "DE10_LITE_GSensor" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(151): used implicit default value for signal "DRAM_ADDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(152): used implicit default value for signal "DRAM_BA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 152
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(153): used implicit default value for signal "DRAM_CAS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 153
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(154): used implicit default value for signal "DRAM_CKE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 154
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(155): used implicit default value for signal "DRAM_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 155
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(156): used implicit default value for signal "DRAM_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 156
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(158): used implicit default value for signal "DRAM_LDQM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 158
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(159): used implicit default value for signal "DRAM_RAS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 159
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(160): used implicit default value for signal "DRAM_UDQM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 160
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(161): used implicit default value for signal "DRAM_WE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 161
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(165): used implicit default value for signal "VGA_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 165
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(166): used implicit default value for signal "VGA_G" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 166
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(167): used implicit default value for signal "VGA_HS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 167
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(168): used implicit default value for signal "VGA_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 168
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(169): used implicit default value for signal "VGA_VS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 169
+Info (12128): Elaborating entity "reset_delay" for hierarchy "reset_delay:u_reset_delay" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 225
+Info (12128): Elaborating entity "spi_pll" for hierarchy "spi_pll:u_spi_pll" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 231
+Info (12128): Elaborating entity "spi_ee_config" for hierarchy "spi_ee_config:u_spi_ee_config" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 238
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(107): used implicit default value for signal "oSPI_CSN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(108): used implicit default value for signal "oSPI_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 108
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:u_led_driver" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 250
+Warning (10541): VHDL Signal Declaration warning at DE10_LITE_GSensor.vhd(130): used implicit default value for signal "oLED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 130
+Warning (12161): Node "spi_ee_config:u_spi_ee_config|oDATA_H[7]" is stuck at GND because node is in wire loop and does not have a source File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 105
+Warning (12161): Node "spi_ee_config:u_spi_ee_config|oDATA_H[6]" is stuck at GND because node is in wire loop and does not have a source File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 105
+Warning (12161): Node "spi_ee_config:u_spi_ee_config|oDATA_H[5]" is stuck at GND because node is in wire loop and does not have a source File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 105
+Warning (12161): Node "spi_ee_config:u_spi_ee_config|oDATA_H[4]" is stuck at GND because node is in wire loop and does not have a source File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 105
+Warning (12161): Node "spi_ee_config:u_spi_ee_config|oDATA_H[3]" is stuck at GND because node is in wire loop and does not have a source File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 105
+Warning (12161): Node "spi_ee_config:u_spi_ee_config|oDATA_H[2]" is stuck at GND because node is in wire loop and does not have a source File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 105
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "GSENSOR_SDI" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 173
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 157
+    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 174
+    Warning (13040): bidirectional pin "ARDUINO_IO[0]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[1]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[2]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[3]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[4]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[5]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[6]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[7]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[8]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[9]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[10]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[11]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[12]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[13]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[14]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_IO[15]" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 175
+    Warning (13040): bidirectional pin "ARDUINO_RESET_N" has no driver File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 176
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 151
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 152
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 152
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 153
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 154
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 155
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 156
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 158
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 159
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 160
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 161
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 163
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 165
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 165
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 165
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 165
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 166
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 166
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 166
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 166
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 167
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 168
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 168
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 168
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 168
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 169
+    Warning (13410): Pin "GSENSOR_CS_N" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 170
+    Warning (13410): Pin "GSENSOR_SCLK" is stuck at GND File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 172
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_CLK_10" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 148
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 149
+    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 150
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 162
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 162
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 164
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 171
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/dahom/Desktop/ABO/Study/S5/[DSD] Digital System Design/The Project/Project Code/Try_1_Accelerometer_Demo/DE10_LITE_GSensor_project_Converted/DE10_LITE_GSensor.vhd Line: 171
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 49 output pins
+    Info (21060): Implemented 35 bidirectional pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Mon Feb 22 14:35:08 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:34
 
 

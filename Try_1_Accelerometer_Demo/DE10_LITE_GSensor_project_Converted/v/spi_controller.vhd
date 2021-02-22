@@ -59,10 +59,12 @@ entity spi_controller_spi_controller is
         iRSTN :  in std_logic;
         iSPI_CLK :  in std_logic;
         iSPI_CLK_OUT :  in std_logic;
-        iP2S_DATA :  in std_logic_vector( SI_DataL downto 0  );
+        -- iP2S_DATA :  in std_logic_vector( SI_DataL downto 0  );
+        iP2S_DATA :  in std_logic_vector( 1 downto 0  );
         iSPI_GO :  in std_logic;
-        oSPI_END :  out std_logic;
-        oS2P_DATA :  out std_logic_vector( SO_DataL downto 0  );
+        oSPI_END :  inout std_logic;
+        -- oS2P_DATA :  out std_logic_vector( SO_DataL downto 0  );
+        oS2P_DATA :  inout std_logic_vector( 1 downto 0  );
         SPI_SDIO :  inout std_logic;
         oSPI_CSN :  out std_logic;
         oSPI_CLK :  out std_logic
@@ -78,32 +80,34 @@ architecture rtl of spi_controller_spi_controller is
     signal spi_count_en : std_logic;
     signal spi_count : std_logic_vector( 3  downto 0  );
     begin 
-        read_mode <= iP2S_DATA(SI_DataL);
+        read_mode <= iP2S_DATA( 1 );
         write_address <= spi_count(3 );
         oSPI_END <= NOR_REDUCE( spi_count );
         oSPI_CSN <= (  not iSPI_GO ) ;
-        oSPI_CLK <= vl2vh_ternary_func( spi_count_en, iSPI_CLK_OUT, '1' );
-        SPI_SDIO <= vl2vh_ternary_func( ( spi_count_en and ( (  not read_mode )  or write_address )  ) , iP2S_DATA(spi_count), 'z' );
+        oSPI_CLK <= vl2vh_ternary_func( spi_count_en='1', iSPI_CLK_OUT, '1' );
+        SPI_SDIO <= vl2vh_ternary_func( ( spi_count_en='1' and ( (  not read_mode='1' )  or write_address='1' )  ) , iP2S_DATA(1), '0' );
         process 
         begin
             wait until ( ( iRSTN'EVENT and ( iRSTN = '0' )  )  or ( iSPI_CLK'EVENT and ( iSPI_CLK = '1' )  )  ) ;
-            if ( (  not iRSTN )  ) then 
+            if ( (  iRSTN = '0')  ) then 
                 spi_count_en <= '0';
                 spi_count <= X"f" ;
             else 
-                if ( oSPI_END ) then 
+                if ( oSPI_END ='1') then 
                     spi_count_en <= '0';
                 else 
-                    if ( iSPI_GO ) then 
+                    if ( iSPI_GO='1' ) then 
                         spi_count_en <= '1';
                     end if;
                 end if;
-                if ( (  not spi_count_en )  ) then 
+                if ( (  not (spi_count_en='1') )  ) then 
                     spi_count <= X"f" ;
                 else 
-                    spi_count <= ( spi_count - '1' ) ;
+                    -- spi_count <= ( spi_count - '1' ) ;
+                    spi_count <= std_logic_vector( unsigned(spi_count) + 1 );
+
                 end if;
-                if ( ( read_mode and (  not write_address )  )  ) then 
+                if ( ( read_mode='1' and (  not (write_address='1') )  )  ) then 
                     oS2P_DATA <= ( oS2P_DATA & SPI_SDIO );
                 end if;
             end if;

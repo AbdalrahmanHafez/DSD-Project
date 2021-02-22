@@ -1,0 +1,14 @@
+v/spi_pll.qip
+v/spi_param.h
+v/spi_ee_config.v
+v/spi_controller.v
+v/reset_delay.v
+v/led_driver.v
+DE10_LITE_GSensor.sdc
+./v/spi_pll.v
+./v/spi_pll_bb.v
+demo_batch/DE10_LITE_GSensor.sof
+demo_batch/test.bat
+filelist.txt
+platform_setup.tcl
+DE10_LITE_GSensor.v

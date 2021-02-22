@@ -80,7 +80,7 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
 use ieee.numeric_std.all;
-use ieee.std_logic_arith.all;
+-- use ieee.std_logic_arith.all;
 use work.vl2vh_common_pack_spi_ee_config.all;
 entity spi_ee_config_spi_ee_config is 
      port (
@@ -101,12 +101,17 @@ architecture rtl of spi_ee_config_spi_ee_config is
     signal SO_DataL : std_logic;
     signal ini_index : std_logic_vector( 3  downto 0  );
     signal SI_DataL : std_logic;
-    signal write_data : std_logic_vector( ( SI_DataL - 2  )  downto 0  );
-    signal p2s_data : std_logic_vector( SI_DataL downto 0  );
+	 -- CONVO
+    --signal write_data : std_logic_vector( ( SI_DataL - 2  )  downto 0  );
+	 signal write_data : std_logic_vector( 1 downto 0  );
+	 --signal p2s_data : std_logic_vector( SI_DataL downto 0  );
+    signal p2s_data : std_logic_vector( 1 downto 0  );
     signal spi_go : std_logic;
     signal spi_end : std_logic;
-    signal s2p_data : std_logic_vector( SO_DataL downto 0  );
-    signal low_byte_data : std_logic_vector( SO_DataL downto 0  );
+    -- signal s2p_data : std_logic_vector( SO_DataL downto 0  );
+    signal s2p_data : std_logic_vector( 1 downto 0  );
+    -- signal low_byte_data : std_logic_vector( SO_DataL downto 0  );
+    signal low_byte_data : std_logic_vector( 1 downto 0  );
     signal spi_state : std_logic;
     signal high_byte : std_logic;
     signal read_back : std_logic;
@@ -116,7 +121,8 @@ architecture rtl of spi_ee_config_spi_ee_config is
     signal high_byte_d : std_logic;
     signal read_back_d : std_logic;
     signal IDLE_MSB : std_logic;
-    signal read_idle_count : std_logic_vector( IDLE_MSB downto 0  );
+    -- signal read_idle_count : std_logic_vector( IDLE_MSB downto 0  );
+    signal read_idle_count : std_logic_vector( 1 downto 0  );
     signal THRESH_ACT : std_logic;
     signal THRESH_INACT : std_logic;
     signal TIME_INACT : std_logic;
@@ -129,7 +135,7 @@ architecture rtl of spi_ee_config_spi_ee_config is
     signal DATA_FORMAT : std_logic;
     signal POWER_CONTROL : std_logic;
     signal IDLE : std_logic;
-    signal INI_NUMBER : std_logic;
+    signal INI_NUMBER : std_logic_vector;
     signal WRITE_MODE : std_logic;
     signal TRANSFER : std_logic;
     signal READ_MODE : std_logic;
@@ -141,10 +147,10 @@ architecture rtl of spi_ee_config_spi_ee_config is
             iRSTN :  in std_logic;
             iSPI_CLK :  in std_logic;
             iSPI_CLK_OUT :  in std_logic;
-            iP2S_DATA :  inout std_logic;
+            iP2S_DATA :  inout std_logic_vector;
             iSPI_GO :  inout std_logic;
             oSPI_END :  inout std_logic;
-            oS2P_DATA :  inout std_logic;
+            oS2P_DATA :  inout std_logic_vector;
             SPI_SDIO :  inout std_logic;
             oSPI_CSN :  out std_logic;
             oSPI_CLK :  out std_logic
@@ -169,34 +175,34 @@ architecture rtl of spi_ee_config_spi_ee_config is
             wait  on ini_index;
             case  ( ini_index ) is 
                 when 
-                    0  => 
+                    "0000"  => 
                     write_data <= ( THRESH_ACT & X"20"  );
                 when 
-                    1  => 
+                    "0001"  => 
                     write_data <= ( THRESH_INACT & X"03"  );
                 when 
-                    2  => 
+                    "0010"  => 
                     write_data <= ( TIME_INACT & X"01"  );
                 when 
-                    3  => 
+                    "0011"  => 
                     write_data <= ( ACT_INACT_CTL & X"7f"  );
                 when 
-                    4  => 
+                    "0100"  => 
                     write_data <= ( THRESH_FF & X"09"  );
                 when 
-                    5  => 
+                    "0101"  => 
                     write_data <= ( TIME_FF & X"46"  );
                 when 
-                    6  => 
+                    "0110"  => 
                     write_data <= ( BW_RATE & X"09"  );
                 when 
-                    7  => 
+                    "0111"  => 
                     write_data <= ( INT_ENABLE & X"10"  );
                 when 
-                    8  => 
+                    "1000"  => 
                     write_data <= ( INT_MAP & X"10"  );
                 when 
-                    9  => 
+                    "1001"  => 
                     write_data <= ( DATA_FORMAT & X"40"  );
                 when 
                      others  => 
@@ -206,16 +212,16 @@ architecture rtl of spi_ee_config_spi_ee_config is
         process 
         begin
             wait until ( ( iRSTN'EVENT and ( iRSTN = '0' )  )  or ( iSPI_CLK'EVENT and ( iSPI_CLK = '1' )  )  ) ;
-            if ( (  not iRSTN )  ) then 
-                ini_index <= '0';
+            if ( iRSTN = '0' )  then 
+                ini_index <= "0";
                 spi_go <= '0';
                 spi_state <= IDLE;
-                read_idle_count <= 0 ;
+                read_idle_count <= "0" ;
                 high_byte <= '0';
                 read_back <= '0';
                 clear_status <= '0';
             else 
-                if ( ( ini_index < INI_NUMBER )  ) then 
+                if ( ini_index  < INI_NUMBER  ) then 
                     case  ( spi_state ) is 
                         when 
                             IDLE => 
@@ -224,8 +230,9 @@ architecture rtl of spi_ee_config_spi_ee_config is
                             spi_state <= TRANSFER;
                         when 
                             TRANSFER => 
-                            if ( spi_end ) then 
-                                ini_index <= ( ini_index + '1' ) ;
+                            if ( spi_end = '1' ) then 
+                                -- ini_index <= ( ini_index + "0001" ) ;
+                                ini_index <= std_logic_vector( unsigned(ini_index) + 1 );
                                 spi_go <= '0';
                                 spi_state <= IDLE;
                             end if;
@@ -234,27 +241,28 @@ architecture rtl of spi_ee_config_spi_ee_config is
                     case  ( spi_state ) is 
                         when 
                             IDLE => 
-                            read_idle_count <= ( read_idle_count + 1  ) ;
-                            if ( high_byte ) then 
+                            -- read_idle_count <= ( read_idle_count + 1  ) ;
+                            read_idle_count <= std_logic_vector( unsigned(read_idle_count) + 1 );
+                            if ( high_byte = '1' ) then 
                                 p2s_data(15  downto 8 ) <= ( READ_MODE & X_HB );
                                 read_back <= '1';
                             else 
-                                if ( read_ready ) then 
+                                if ( read_ready = '1' ) then 
                                     p2s_data(15  downto 8 ) <= ( READ_MODE & X_LB );
                                     read_back <= '1';
                                 else 
-                                    if ( ( ( (  not clear_status_d(3 ) )  and iG_INT2 )  or read_idle_count(IDLE_MSB) )  ) then 
+                                    -- if ( ( ( (not clear_status_d(3))  and (iG_INT2='1') )  or read_idle_count(1) ) = '1'  ) then 
                                         p2s_data(15  downto 8 ) <= ( READ_MODE & INT_SOURCE );
                                         clear_status <= '1';
-                                    end if;
+                                    -- end if;
                                 end if;
                             end if;
-                            if ( ( ( ( high_byte or read_ready )  or read_idle_count(IDLE_MSB) )  or ( (  not clear_status_d(3 ) )  and iG_INT2 )  )  ) then 
+                            -- if ( ( ( ( high_byte or read_ready )  or read_idle_count(1) )  or ( (  not clear_status_d(3 ) )  and iG_INT2 )  )  ) then 
                                 spi_go <= '1';
                                 spi_state <= TRANSFER;
-                            end if;
-                            if ( read_back_d ) then 
-                                if ( high_byte_d ) then 
+                            -- end if;
+                            if ( read_back_d = '1' ) then 
+                                if ( high_byte_d = '1') then 
                                     oDATA_H <= s2p_data;
                                     oDATA_L <= low_byte_data;
                                 else 
@@ -263,17 +271,17 @@ architecture rtl of spi_ee_config_spi_ee_config is
                             end if;
                         when 
                             TRANSFER => 
-                            if ( spi_end ) then 
+                            if ( spi_end = '1' ) then 
                                 spi_go <= '0';
                                 spi_state <= IDLE;
-                                if ( read_back ) then 
+                                if ( read_back = '1' ) then 
                                     read_back <= '0';
                                     high_byte <= (  not high_byte ) ;
                                     read_ready <= '0';
                                 else 
                                     clear_status <= '0';
                                     read_ready <= s2p_data(6 );
-                                    read_idle_count <= 0 ;
+                                    read_idle_count <= "0" ;
                                 end if;
                             end if;
                     end case;
@@ -283,10 +291,10 @@ architecture rtl of spi_ee_config_spi_ee_config is
         process 
         begin
             wait until ( ( iRSTN'EVENT and ( iRSTN = '0' )  )  or ( iSPI_CLK'EVENT and ( iSPI_CLK = '1' )  )  ) ;
-            if ( (  not iRSTN )  ) then 
+            if ( iRSTN = '0') then 
                 high_byte_d <= '0';
                 read_back_d <= '0';
-                clear_status_d <= '0';
+                clear_status_d <= "0";
             else 
                 high_byte_d <= high_byte;
                 read_back_d <= read_back;

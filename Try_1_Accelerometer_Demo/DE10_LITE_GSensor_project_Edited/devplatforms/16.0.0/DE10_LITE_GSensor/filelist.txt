@@ -1,0 +1,2 @@
+DE10_LITE_GSensor.qar
+DE10_LITE_GSensor.qp_info

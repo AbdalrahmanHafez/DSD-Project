@@ -1,0 +1,69 @@
+verilog2vhdl:                  Verilog to VHDL Converter
+verilog2vhdl:               Version: 6.3.0 Released on 22 Dec 2018
+verilog2vhdl:          Support info: help@edautils.com
+verilog2vhdl:      
+verilog2vhdl:      Copyright (c) 2012-2018 EDAUtils
+verilog2vhdl:      All rights reserved.
+verilog2vhdl:       
+verilog2vhdl:           
+verilog2vhdl:      IN NO EVENT SHALL EDAUtils BE LIABLE TO ANY PARTY FOR 
+verilog2vhdl:      DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+verilog2vhdl:      DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE 
+verilog2vhdl:      OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF 
+verilog2vhdl:      EDAUtils HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH 
+verilog2vhdl:      DAMAGE. EDAUtils SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+verilog2vhdl:      INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+verilog2vhdl:      MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
+verilog2vhdl:      SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND 
+verilog2vhdl:      EDAUtils HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE,
+verilog2vhdl:      SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+verilog2vhdl:      USER SHALL NOT, DIRECTLY, INDIRECTLY, ALONE, OR WITH
+verilog2vhdl:      ANOTHER PARTY, (i) COPY, DISASSEMBLE, REVERSE ENGINEER, OR
+verilog2vhdl:      DECOMPILE THE TOOL(S) (ii) MODIFY, CREATE DERIVATIVE TOOLS BASED
+verilog2vhdl:      UPON, OR TRANSLATE THE TOOL(S) (iii) LICENSE, SELL, RENT, LEASE,
+verilog2vhdl:      TRANSFER, GRANT ANY RIGHTS IN OR OTHERWISE COMMERCIALLY 
+verilog2vhdl:      EXPLOIT THE TOOL(S) IN ANY FORM TO ANY OTHER PARTY, NOR SHALL
+verilog2vhdl:      USER ATTEMPT TO DO ANY OF THE FOREGOING OR CAUSE OR PERMIT
+verilog2vhdl:      ANY THIRD PARTY TO DO OR ATTEMPT TO DO ANY OF THE FOREGOING,
+verilog2vhdl:      EXCEPT AS EXPRESSLY PERMITTED HEREUNDER. YOU ACKNOWLEDGE
+verilog2vhdl:      AND AGREE THAT EDAUtils SHALL OWN ALL RIGHT, TITLE AND INTEREST
+verilog2vhdl:      IN AND TO ALL INTELLECTUAL PROPERTY RIGHTS (INCLUDING
+verilog2vhdl:      ALL DERIVATIVES OR IMPROVEMENTS THEREOF) IN THE TOOL(S) AND
+verilog2vhdl:      ANY SUGGESTIONS, ENHANCEMENT REQUESTS, FEEDBACK,
+verilog2vhdl:      RECOMMENDATIONS OR OTHER INFORMATION PROVIDED BY USERS
+verilog2vhdl:      RELATING TO THE TOOL(S).
+verilog2vhdl:             
+verilog2vhdl: Note: 51925: Running with option:  -in /scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/input/spi_controller.v -top spi_controller -out /scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/output/output.vhd  -user andrewashrafattia15@gmail.com  ...
+verilog2vhdl: Note: 51815: Preprocessing input file '/scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/input/spi_controller.v' ...
+verilog2vhdl: Error: 50629: Failed to read included file 'spi_param.h '...
+verilog2vhdl: Note: 51630: Completed first pass of the preprocessing ...
+verilog2vhdl: Note: 51815: Preprocessing input file 'spi_param.h' ...
+verilog2vhdl: Note: 51632: Finished preprocessing of the file '/scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/input/spi_controller.v' ...
+verilog2vhdl: Note: 51633: Writtten the preprocessed RTL in the file : /scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/edautils_temp_file4632081977698234949.v ...
+verilog2vhdl: Note: 51602: Finished preprocessing of the file '/scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/input/spi_controller.v' ...
+verilog2vhdl: Note: 51817: Parsing input file '/scratch/edautilsonine/runarea/verilog2vhdl/andrewashrafattia15/spi_controller_2021-02-22-1613986894/input/spi_controller.v' ...
+verilog2vhdl: Error: 51886: Problem to open include file spi_param.h in read mode ... 
+verilog2vhdl: Note: 51604: Completed  parsing ...
+verilog2vhdl: Note: 51926: Memory usage after parsing input file ...
+verilog2vhdl:              Total Memory Acuired: 81.0 MB
+verilog2vhdl:                              Used: 52.63 MB
+verilog2vhdl:                              Free: 28.36 MB
+verilog2vhdl:                      Percent Used: 64.98 %
+verilog2vhdl:                      Percent Free: 35.01 %
+verilog2vhdl: Note: 51928: Memory usage after elaboration ...
+verilog2vhdl:              Total Memory Acuired: 81.0 MB
+verilog2vhdl:                              Used: 16.56 MB
+verilog2vhdl:                              Free: 64.43 MB
+verilog2vhdl:                      Percent Used: 20.45 %
+verilog2vhdl:                      Percent Free: 79.54 %
+verilog2vhdl: Note: 51931: Memory usage after printing ...
+verilog2vhdl:              Total Memory Acuired: 80.5 MB
+verilog2vhdl:                              Used: 17.98 MB
+verilog2vhdl:                              Free: 62.51 MB
+verilog2vhdl:                      Percent Used: 22.34 %
+verilog2vhdl:                      Percent Free: 77.65 %
+verilog2vhdl: Note: 51921: Found 2 error(s) and 0 warning(s) ...
+verilog2vhdl: Note: 51922: Thank you for using this utility
+verilog2vhdl: Note: 51923: Send your suggestion/feedback to help@edautils.com
+verilog2vhdl: Note: 51924: Exiting ...
+

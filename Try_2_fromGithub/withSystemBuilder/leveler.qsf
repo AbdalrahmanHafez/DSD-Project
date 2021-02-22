@@ -1,0 +1,196 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "MAX 10 FPGA"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY top_level
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "16.0.0"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:30:43 JANUARY 08,2021"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+
+#============================================================
+# SEG7
+#============================================================
+set_location_assignment PIN_C15 -to HEX0[2]
+set_location_assignment PIN_C16 -to HEX0[3]
+set_location_assignment PIN_E16 -to HEX0[4]
+set_location_assignment PIN_D17 -to HEX0[5]
+set_location_assignment PIN_C17 -to HEX0[6]
+set_location_assignment PIN_D15 -to HEX0[7]
+set_location_assignment PIN_C18 -to HEX1[0]
+set_location_assignment PIN_D18 -to HEX1[1]
+set_location_assignment PIN_E18 -to HEX1[2]
+set_location_assignment PIN_B16 -to HEX1[3]
+set_location_assignment PIN_A17 -to HEX1[4]
+set_location_assignment PIN_A18 -to HEX1[5]
+set_location_assignment PIN_B17 -to HEX1[6]
+set_location_assignment PIN_A16 -to HEX1[7]
+set_location_assignment PIN_B20 -to HEX2[0]
+set_location_assignment PIN_A20 -to HEX2[1]
+set_location_assignment PIN_B19 -to HEX2[2]
+set_location_assignment PIN_A21 -to HEX2[3]
+set_location_assignment PIN_B21 -to HEX2[4]
+set_location_assignment PIN_C22 -to HEX2[5]
+set_location_assignment PIN_B22 -to HEX2[6]
+set_location_assignment PIN_A19 -to HEX2[7]
+set_location_assignment PIN_F21 -to HEX3[0]
+set_location_assignment PIN_E22 -to HEX3[1]
+set_location_assignment PIN_E21 -to HEX3[2]
+set_location_assignment PIN_C19 -to HEX3[3]
+set_location_assignment PIN_C20 -to HEX3[4]
+set_location_assignment PIN_D19 -to HEX3[5]
+set_location_assignment PIN_E17 -to HEX3[6]
+set_location_assignment PIN_D22 -to HEX3[7]
+set_location_assignment PIN_F18 -to HEX4[0]
+set_location_assignment PIN_E20 -to HEX4[1]
+set_location_assignment PIN_E19 -to HEX4[2]
+set_location_assignment PIN_J18 -to HEX4[3]
+set_location_assignment PIN_H19 -to HEX4[4]
+set_location_assignment PIN_F19 -to HEX4[5]
+set_location_assignment PIN_F20 -to HEX4[6]
+set_location_assignment PIN_F17 -to HEX4[7]
+set_location_assignment PIN_J20 -to HEX5[0]
+set_location_assignment PIN_K20 -to HEX5[1]
+set_location_assignment PIN_L18 -to HEX5[2]
+set_location_assignment PIN_N18 -to HEX5[3]
+set_location_assignment PIN_M20 -to HEX5[4]
+set_location_assignment PIN_N19 -to HEX5[5]
+set_location_assignment PIN_N20 -to HEX5[6]
+set_location_assignment PIN_L19 -to HEX5[7]
+
+#============================================================
+# KEY
+#============================================================
+set_location_assignment PIN_B8 -to KEY[0]
+set_location_assignment PIN_A7 -to KEY[1]
+
+#============================================================
+# LED
+#============================================================
+set_location_assignment PIN_A8 -to LEDR[0]
+set_location_assignment PIN_A9 -to LEDR[1]
+set_location_assignment PIN_A10 -to LEDR[2]
+set_location_assignment PIN_B10 -to LEDR[3]
+set_location_assignment PIN_D13 -to LEDR[4]
+set_location_assignment PIN_C13 -to LEDR[5]
+set_location_assignment PIN_E14 -to LEDR[6]
+set_location_assignment PIN_D14 -to LEDR[7]
+set_location_assignment PIN_A11 -to LEDR[8]
+set_location_assignment PIN_B11 -to LEDR[9]
+
+#============================================================
+# SW
+#============================================================
+set_location_assignment PIN_C10 -to SW[0]
+set_location_assignment PIN_C11 -to SW[1]
+set_location_assignment PIN_D12 -to SW[2]
+set_location_assignment PIN_C12 -to SW[3]
+set_location_assignment PIN_A12 -to SW[4]
+set_location_assignment PIN_B12 -to SW[5]
+set_location_assignment PIN_A13 -to SW[6]
+set_location_assignment PIN_A14 -to SW[7]
+set_location_assignment PIN_B14 -to SW[8]
+set_location_assignment PIN_F15 -to SW[9]
+
+#============================================================
+# Accelerometer
+#============================================================
+set_location_assignment PIN_AB16 -to GSENSOR_CS_N
+set_location_assignment PIN_Y14 -to GSENSOR_INT[1]
+set_location_assignment PIN_Y13 -to GSENSOR_INT[2]
+set_location_assignment PIN_AB15 -to GSENSOR_SCLK
+set_location_assignment PIN_V11 -to GSENSOR_SDI
+set_location_assignment PIN_V12 -to GSENSOR_SDO
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE top_level.vhd
+set_global_assignment -name VHDL_FILE spi_master.vhd
+set_global_assignment -name VHDL_FILE decoder7seg.vhd
+set_global_assignment -name VHDL_FILE clock_div.vhd
+set_global_assignment -name VHDL_FILE accel_driver.vhd
+set_global_assignment -name VHDL_FILE top_level_tb.vhd
+set_global_assignment -name VHDL_FILE spi_master_tb.vhd
+set_global_assignment -name VHDL_FILE clock_div_tb.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M8 -to clk50MHz
+set_location_assignment PIN_E4 -to cs
+set_location_assignment PIN_F5 -to cs_test
+set_location_assignment PIN_B4 -to int1
+set_location_assignment PIN_G3 -to int1_test
+set_location_assignment PIN_J8 -to intBypass
+set_location_assignment PIN_K2 -to led0[6]
+set_location_assignment PIN_F2 -to led0[5]
+set_location_assignment PIN_L1 -to led0[4]
+set_location_assignment PIN_L2 -to led0[3]
+set_location_assignment PIN_L9 -to led0[2]
+set_location_assignment PIN_K1 -to led0[1]
+set_location_assignment PIN_M3 -to led0[0]
+set_location_assignment PIN_J9 -to led0_dp
+set_location_assignment PIN_R3 -to led1[6]
+set_location_assignment PIN_M2 -to led1[5]
+set_location_assignment PIN_E1 -to led1[4]
+set_location_assignment PIN_H1 -to led1[3]
+set_location_assignment PIN_J1 -to led1[2]
+set_location_assignment PIN_F1 -to led1[1]
+set_location_assignment PIN_G1 -to led1[0]
+set_location_assignment PIN_D3 -to led1_dp
+set_location_assignment PIN_E6 -to led2[6]
+set_location_assignment PIN_D6 -to led2[5]
+set_location_assignment PIN_B1 -to led2[4]
+set_location_assignment PIN_E8 -to led2[3]
+set_location_assignment PIN_F7 -to led2[2]
+set_location_assignment PIN_H4 -to led2[1]
+set_location_assignment PIN_L8 -to led2[0]
+set_location_assignment PIN_D2 -to led2_dp
+set_location_assignment PIN_C4 -to led3[6]
+set_location_assignment PIN_D7 -to led3[5]
+set_location_assignment PIN_B3 -to led3[3]
+set_location_assignment PIN_D5 -to led3[4]
+set_location_assignment PIN_C5 -to led3[2]
+set_location_assignment PIN_B2 -to led3[1]
+set_location_assignment PIN_A4 -to led3[0]
+set_location_assignment PIN_E12 -to led3_dp
+set_location_assignment PIN_P4 -to sclk_test
+set_location_assignment PIN_P5 -to sclk
+set_location_assignment PIN_K8 -to s3_test
+set_location_assignment PIN_K9 -to s2_test
+set_location_assignment PIN_J3 -to s1_test
+set_location_assignment PIN_N3 -to rst_led
+set_location_assignment PIN_M9 -to rst
+set_location_assignment PIN_C3 -to mosi_test
+set_location_assignment PIN_C2 -to mosi
+set_location_assignment PIN_C1 -to mode_test
+set_location_assignment PIN_K5 -to miso_test
+set_location_assignment PIN_K4 -to miso
+set_location_assignment PIN_B5 -to led5_dp
+set_location_assignment PIN_K6 -to led5[0]
+set_location_assignment PIN_F3 -to led5[2]
+set_location_assignment PIN_D1 -to led5[1]
+set_location_assignment PIN_J4 -to led5[3]
+set_location_assignment PIN_H3 -to led5[4]
+set_location_assignment PIN_F4 -to led5[5]
+set_location_assignment PIN_E3 -to led5[6]
+set_location_assignment PIN_G4 -to led4_dp
+set_location_assignment PIN_E9 -to led4[0]
+set_location_assignment PIN_C6 -to led4[1]
+set_location_assignment PIN_D8 -to led4[2]
+set_location_assignment PIN_A3 -to led4[3]
+set_location_assignment PIN_A2 -to led4[4]
+set_location_assignment PIN_A5 -to led4[5]
+set_location_assignment PIN_D9 -to led4[6]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2]
